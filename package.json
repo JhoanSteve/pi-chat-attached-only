@@ -1,0 +1,51 @@
+{
+  "name": "pi-chat-attached-only",
+  "version": "0.1.0",
+  "description": "Pi extension: Continue-style chat mode that only uses the files you attach, never follows imports, and answers with code blocks you can apply or copy.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Jhoan",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "chat-mode",
+    "attached-only",
+    "read-only",
+    "continue",
+    "safety"
+  ],
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/chat-attached-only.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "pack:check": "npm pack --dry-run"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
